@@ -32,6 +32,14 @@ module.exports=function getStatistics(numbers){
     stats.average = getAverage(numbers);
     console.log(stats,"**********************************");
     
+    function EmailAlert(){
+        this.emailSent = false;
+    }
+    function LEDAlert(){
+        this.ledGlows = false;
+    }
+    const ledAlert=new LEDAlert();
+    console.log("......", ledAlert);
     return stats;
 }
 
