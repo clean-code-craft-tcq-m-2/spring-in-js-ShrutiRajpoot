@@ -4,7 +4,7 @@ module.exports=function getStatistics(numbers){
     stats = {
     min: '',
     max: '',
-    avg:''
+    average:''
     };
     
     function getMin(arr)
@@ -30,7 +30,7 @@ module.exports=function getStatistics(numbers){
     }
     stats.min = getMin(numbers);
     stats.max = getMax(numbers);
-    stats.avg = getAverage(numbers);
+    stats.average = getAverage(numbers);
     console.log(stats,"**********************************");
     
     return stats;
