@@ -16,11 +16,10 @@ module.exports=function getStatistics(numbers){
     }
     function getMax(arr)
     {
-//         let res = arr[0];
-//         for(let i = 1; i < arr.length; i++)
-//         res = Math.max(res, arr[i]);
-//         return res;
-        return 0;
+        let res = arr[0];
+        for(let i = 1; i < arr.length; i++)
+        res = Math.max(res, arr[i]);
+        return res;
     }
     function getAverage(arr){
         let sum = 0;
