@@ -24,20 +24,20 @@ describe("StatisticsTest",function(){
         // Use https://www.w3schools.com/jsref/jsref_isnan.asp
         
     })
-//     it("raises alerts when max is greater than threshold",function(){
-//          const emailAlert=new EmailAlert();
-//          const ledAlert=new LEDAlert();
-//          const alerters=[emailAlert,ledAlert];
+    it("raises alerts when max is greater than threshold",function(){
+         const emailAlert=new EmailAlert();
+         const ledAlert=new LEDAlert();
+         const alerters=[emailAlert,ledAlert];
 
-//          const maxThreshold = 10.2;
+         const maxThreshold = 10.2;
 
-//          const statsAlerter=new StatsAlerter(maxThreshold, alerters);
-//          statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]);
+         const statsAlerter=new StatsAlerter(maxThreshold, alerters);
+         statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]);
      
-//          expect(emailAlert.emailSent).tobe(true);
-//          expect(ledAlert.ledGlows).tobe(true);
+         expect(emailAlert.emailSent).tobe(true);
+         expect(ledAlert.ledGlows).tobe(true);
 
         
         
-//     }) 
+    }) 
 })
