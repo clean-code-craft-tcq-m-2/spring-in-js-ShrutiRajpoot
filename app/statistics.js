@@ -39,6 +39,10 @@ module.exports=function getStatistics(numbers){
         this.ledGlows = false;
     }
     const ledAlert=new LEDAlert();
+    const emailAlert=new EmailAlert();
+    const alerters=[emailAlert,ledAlert];
+    const maxThreshold = 10.2;
+    const statsAlerter=new StatsAlerter(maxThreshold, alerters)
     console.log("......", ledAlert);
     return stats;
 }
