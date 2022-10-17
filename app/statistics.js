@@ -1,5 +1,30 @@
 module.exports=function getStatistics(numbers){
     
     //implement the computation of statistics here
+    stats = {
+    min: '',
+    max: '',
+    average:''
+    };
+    
+    function getMin(arr)
+    {
+        let res = arr[0];
+        for(let i = 1; i < arr.length; i++)
+        res = Math.min(res, arr[i]);
+        return res;
+    }
+    function getMax(arr)
+    {
+        let res = arr[0];
+        for(let i = 1; i < arr.length; i++)
+        res = Math.max(res, arr[i]);
+        return res;
+    }
+    stats.min = getMin(numbers);
+    stats.max = getMax(numbers);
+    
+    
+    return stats;
 }
 
