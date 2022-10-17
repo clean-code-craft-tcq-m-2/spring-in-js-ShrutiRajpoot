@@ -30,7 +30,7 @@ module.exports=function getStatistics(numbers){
     stats.min = getMin(numbers);
     stats.max = getMax(numbers);
     stats.avg = getAverage(numbers);
-    
+    console.log(stats,"**********************************");
     
     return stats;
 }
