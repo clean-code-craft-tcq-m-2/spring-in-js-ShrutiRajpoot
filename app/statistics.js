@@ -42,8 +42,18 @@ module.exports=function getStatistics(numbers){
     const emailAlert=new EmailAlert();
     const alerters=[emailAlert,ledAlert];
     const maxThreshold = 10.2;
-    const statsAlerter=new StatsAlerter(maxThreshold, alerters)
-    console.log("......", ledAlert);
+
+    class StatsAlerter {
+      constructor(maxThreshold, alerters) {
+          this.maxThreshold = maxThreshold;
+          this.alerters = alerters;
+      }
+      checkAndAlert(arr) {
+          console.log(this.maxThreshold, this.alerters, arr);
+      }
+    }
+    const statsAlerter=new StatsAlerter(maxThreshold, alerters);
+    statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]);
     return stats;
 }
 
