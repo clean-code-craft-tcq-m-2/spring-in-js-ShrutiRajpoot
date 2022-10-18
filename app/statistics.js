@@ -50,11 +50,17 @@ module.exports=function getStatistics(numbers){
       }
       checkAndAlert(arr) {
           console.log(this.maxThreshold, this.alerters, arr);
-          console.log(getMax(arr));
+          let max = getMax(arr);
+          if(max > this.maxThreshold){
+            return true;
+          }
+          else{
+            return false;
+          }
       }
     }
     const statsAlerter=new StatsAlerter(maxThreshold, alerters);
-    statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]);
+    console.log(statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]));
     return stats;
 }
 
