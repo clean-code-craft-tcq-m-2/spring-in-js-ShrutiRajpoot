@@ -51,6 +51,7 @@ module.exports=function getStatistics(numbers){
       checkAndAlert(arr) {
           console.log(this.maxThreshold, this.alerters, arr);
           let max = getMax(arr);
+          console.log(this.alerter.LEDAlert.ledGlows)
           if(max > this.maxThreshold){
             return true;
           }
