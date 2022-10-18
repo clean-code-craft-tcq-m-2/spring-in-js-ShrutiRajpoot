@@ -1,3 +1,5 @@
-function EmailAlert(){
-   this.emailSent = false;
+class EmailAlert{
+   constructor() {
+      this.emailSent = false;
+   }
 }
