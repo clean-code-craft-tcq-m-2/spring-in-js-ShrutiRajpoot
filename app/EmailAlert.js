@@ -1,6 +1,5 @@
-class EmailAlert{
+ module.exports = class EmailAlert{
    constructor() {
       this.emailSent = false;
    }
 }
- export default EmailAlert;
