@@ -3,3 +3,4 @@ class EmailAlert{
       this.emailSent = false;
    }
 }
+ export default EmailAlert;
