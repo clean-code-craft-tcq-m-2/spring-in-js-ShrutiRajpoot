@@ -1,6 +1,4 @@
 const getStatistics=require("../app/statistics");
-import EmailAlert from '../app/EmailAlert';
-console.log(EmailAlert);
 describe("StatisticsTest",function(){
     it("reportsAverageMinMaxx",function(){
         const r1 = 1.5;
