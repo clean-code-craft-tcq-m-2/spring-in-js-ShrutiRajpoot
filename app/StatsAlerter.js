@@ -1,4 +1,4 @@
-    class StatsAlerter {
+    module.exports = class StatsAlerter {
       constructor(maxThreshold, alerters) {
           this.maxThreshold = maxThreshold;
           this.alerters = alerters;
