@@ -1,19 +1,19 @@
 module.exports=function getStatistics(numbers){
     
     //implement the computation of statistics here
-    stats = {
-    min: '',
-    max: '',
-    average:''
-    };
+//     stats = {
+//     min: '',
+//     max: '',
+//     average:''
+//     };
     
-    function getMin(arr)
-    {
-        let res = arr[0];
-        for(let i = 1; i < arr.length; i++)
-        res = Math.min(res, arr[i]);
-        return res;
-    }
+//     function getMin(arr)
+//     {
+//         let res = arr[0];
+//         for(let i = 1; i < arr.length; i++)
+//         res = Math.min(res, arr[i]);
+//         return res;
+//     }
     function getMax(arr)
     {
         let res = arr[0];
@@ -21,15 +21,15 @@ module.exports=function getStatistics(numbers){
         res = Math.max(res, arr[i]);
         return res;
     }
-    function getAverage(arr){
-        let sum = 0;
-        for(let i = 0; i < arr.length; i++)
-         sum = sum + arr[i];
-        return sum/arr.length;
-    }
-    stats.min = getMin(numbers);
-    stats.max = getMax(numbers);
-    stats.average = getAverage(numbers);
+//     function getAverage(arr){
+//         let sum = 0;
+//         for(let i = 0; i < arr.length; i++)
+//          sum = sum + arr[i];
+//         return sum/arr.length;
+//     }
+//     stats.min = getMin(numbers);
+//     stats.max = getMax(numbers);
+//     stats.average = getAverage(numbers);
     console.log(stats,"**********************************");
     
     function EmailAlert(){
@@ -61,6 +61,6 @@ module.exports=function getStatistics(numbers){
     const statsAlerter=new StatsAlerter(maxThreshold, alerters);
     statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]);
     console.log(emailAlert.emailSent, ledAlert.ledGlows);
-    return stats;
+//     return stats;
 }
 
