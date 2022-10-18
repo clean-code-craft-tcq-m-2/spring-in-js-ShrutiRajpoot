@@ -50,6 +50,7 @@ module.exports=function getStatistics(numbers){
       }
       checkAndAlert(arr) {
           console.log(this.maxThreshold, this.alerters, arr);
+          console.log(getMax(arr));
       }
     }
     const statsAlerter=new StatsAlerter(maxThreshold, alerters);
