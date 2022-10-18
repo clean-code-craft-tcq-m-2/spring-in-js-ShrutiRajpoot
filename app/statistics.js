@@ -51,19 +51,16 @@ module.exports=function getStatistics(numbers){
           this.alerters = alerters;
       }
       checkAndAlert(arr) {
-          console.log(this.maxThreshold, this.alerters, arr);
           let max = getMax(arr);
-          console.log(this.alerters.LedAlert)
           if(max > this.maxThreshold){
-            return true;
-          }
-          else{
-            return false;
+            this.alerters[0].emailSent = true;
+            this.alerters[1].ledGlows = true
           }
       }
     }
     const statsAlerter=new StatsAlerter(maxThreshold, alerters);
-    console.log(statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]));
+    statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]);
+    console.log(emailAlert.emailSent, ledAlert.ledGlows);
     return stats;
 }
 
