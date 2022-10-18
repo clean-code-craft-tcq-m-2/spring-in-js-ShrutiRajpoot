@@ -1,5 +1,5 @@
 const getStatistics=require("../app/statistics");
-const EmailAlert = require("../app/EmailAlert");
+import EmailAlert from '../app/EmailAlert';
 console.log(EmailAlert);
 describe("StatisticsTest",function(){
     it("reportsAverageMinMaxx",function(){
