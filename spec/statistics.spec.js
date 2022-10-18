@@ -37,7 +37,7 @@ describe("StatisticsTest",function(){
 
          const statsAlerter=new StatsAlerter(maxThreshold, alerters);
          statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]);
-     
+        console.log(emailAlert,"***************", ledAlert);
          expect(emailAlert.emailSent).tobe(true);
          expect(ledAlert.ledGlows).tobe(true);
 
