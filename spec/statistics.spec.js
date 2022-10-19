@@ -1,4 +1,8 @@
 const getStatistics=require("../app/statistics");
+const StatsAlerter =require("../app/StatsAlerter.js");
+const EmailAlert =require("../app/EmailAlert.js");
+const LEDAlert =require("../app/LedAlert.js");
+
 describe("StatisticsTest",function(){
     it("reportsAverageMinMaxx",function(){
         const r1 = 1.5;
@@ -28,16 +32,11 @@ describe("StatisticsTest",function(){
          const emailAlert=new EmailAlert();
          const ledAlert=new LEDAlert();
          const alerters=[emailAlert,ledAlert];
-
          const maxThreshold = 10.2;
 
          const statsAlerter=new StatsAlerter(maxThreshold, alerters);
          statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]);
-     
-         expect(emailAlert.emailSent).tobe(true);
-         expect(ledAlert.ledGlows).tobe(true);
-
-        
-        
+        expect(emailAlert.emailSent).toBe(true);
+        expect(ledAlert.ledGlows).toBe(true);
     }) 
 })
